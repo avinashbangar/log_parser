@@ -23,8 +23,8 @@ def loadLookupData(lookup_file=LOOKUP_FILE):
 				continue
 			
 			# Create a key from dstport and protocol
-			dstport_protocol = line_li[0] + '_' + line_li[1]
-			lookup[dstport_protocol] = line_li[2].strip()
+			dstport_protocol = line_li[0] + '_' + line_li[1].lower()
+			lookup[dstport_protocol] = line_li[2].strip().lower()
 
 	return lookup
 
